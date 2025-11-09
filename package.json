@@ -1,0 +1,13 @@
+{
+  "name": "rate-limiter-demo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app/simple-server.js",
+  "scripts": {
+    "start": "node app/simple-server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
