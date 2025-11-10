@@ -1,4 +1,3 @@
-# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -7,6 +6,7 @@ spec:
   selector:
     app: rate-limiter-demo
   ports:
-    - port: 80
+    - name: http
+      port: 80
       targetPort: 8080
-  type: NodePort
+  type: LoadBalancer

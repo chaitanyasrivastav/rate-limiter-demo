@@ -14,10 +14,7 @@ spec:
     spec:
       containers:
         - name: rate-limiter-demo
-          image: rate-limiter-demo
+          image: rate-limiter-demo:v2
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
-          resources:
-            requests:
-              cpu: "200m"
