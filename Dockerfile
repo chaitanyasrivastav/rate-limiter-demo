@@ -4,4 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8080
-CMD ["node", "app/simple-server.js"]
+ENV CMD
+CMD ["/bin/sh", "-c", "$CMD"]

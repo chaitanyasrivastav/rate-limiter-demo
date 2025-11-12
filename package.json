@@ -5,7 +5,11 @@
   "type": "module",
   "main": "app/simple-server.js",
   "scripts": {
-    "start": "node app/simple-server.js"
+    "start": "node app/simple-server.js",
+    "start:fw": "STRATEGY=fw node app/simple-server.js",
+    "start:sw": "STRATEGY=sw node app/simple-server.js",
+    "start:tb": "STRATEGY=tb node app/simple-server.js",
+    "start:lb": "STRATEGY=lb node app/simple-server.js"
   },
   "dependencies": {
     "express": "^4.19.2"

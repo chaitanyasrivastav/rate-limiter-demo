@@ -14,7 +14,10 @@ spec:
     spec:
       containers:
         - name: rate-limiter-demo
-          image: rate-limiter-demo:v2
+          image: rate-limiter-demo:v1
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
+          env:
+            - name: CMD
+              value: "npm run start:fw"

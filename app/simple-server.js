@@ -1,6 +1,11 @@
 import express from "express";
+import { rateLimiterStrategy } from "./rate-limiter-strategy.js";
 
 const app = express();
+
+app.use((req, res, next) => {
+  rateLimiterStrategy(req, res, next);
+});
 
 function heavyComputation() {
   const start = Date.now();
@@ -9,7 +14,7 @@ function heavyComputation() {
 
 app.get("/", (req, res) => {
   const userId = req.headers["x-user-id"] || "anonymous";
-  console.log(`🧍 User: ${userId} hit the server`);
+  console.log(`User: ${userId} hit the server`);
   heavyComputation();
   res.send(`Processed request for user ${userId}`);
 });
