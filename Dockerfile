@@ -4,5 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8080
-ENV CMD
+ARG CMD="npm start"
 CMD ["/bin/sh", "-c", "$CMD"]

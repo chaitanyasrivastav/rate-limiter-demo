@@ -20,4 +20,4 @@ spec:
             - containerPort: 8080
           env:
             - name: CMD
-              value: "npm run start:fw"
+              value: "npm run start:sw"
