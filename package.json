@@ -9,9 +9,11 @@
     "start:fw": "STRATEGY=fw node app/simple-server.js",
     "start:sw": "STRATEGY=sw node app/simple-server.js",
     "start:tb": "STRATEGY=tb node app/simple-server.js",
-    "start:lb": "STRATEGY=lb node app/simple-server.js"
+    "start:lb": "STRATEGY=lb node app/simple-server.js",
+    "send:requests": "NODE_DEBUG=net node app/sendRequests.js"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "express": "^4.19.2"
   }
 }
